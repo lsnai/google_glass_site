@@ -239,3 +239,14 @@ footer#rodape {
 footer#rodape p {
     text-align: center;
 }
+video#filme01{
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+video#filme02{
+    width: 100%;
+    margin-top: -15px;
+   
+}

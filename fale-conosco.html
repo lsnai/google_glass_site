@@ -42,7 +42,7 @@
 <h3 class="direita">Atualizado em 01/Maio/2013</h3>
                 </hgroup>
             </header>
-<form>
+<form method="post" id="fContato" action="mailto:naiaralimaubj6327@gmail.com">
     <fieldset id="usuario">
 <legend>Identificação do Usuário</legend>
     <p><Label for="cNome">Nome:</Label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
@@ -59,20 +59,44 @@
         <legend>Endereço do Usuário</legend>
     <p>Logradouro: <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ..."/></p>
     <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
-    Estado:
-    Cidade:
+    <p><label for="cEst">Estado:</label>
+    <select name="tEst" id="cEst">
+        <optgroup label="Região Sudeste">
+        <option>Rio de Janeiro</option>
+        <option>São Paulo</option>
+        <option>Minas Gerais</option>
+    </optgroup>
+    <optgroup label="Região Sul">
+        <option>Paraná</option>
+        <option>Santa Catarina</option>
+        <option>Rio Grande do Sul</option>
+    </optgroup>
+    <optgroup label="Região Nordeste">
+        <option selected>Ceará</option>
+    </optgroup>
+    </select></p>
+    <p><label for="cCid">Cidade:</label><input type=text name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"/></p>
+    <datalist id="cidades">
+        <option value="Rio de Janeiro"></option>
+        <option value="Nova Iguaçu"></option>
+        <option value="Niterói"></option>
+        <option value="Belford Roxo"></option>
+        <option value="Ubajara"></option>
+        <option value="Fortaleza"></option>
+    </datalist>
 </fieldset>
     <fieldset id="mensagem">
         <legend>Mensagem do Usuário</legend>
-    Grau de Urgência:
-    Mensagem:
+        <p><label for="cUrg">Grau de Urgência:</label> <input type="range" name="tUrg" id="cUrg" min="0" max="10"/></p>
+            <p><label for="cMsg">Mensagem:</label>
+            <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
 </fieldset>
     <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+        <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="cCor">Cor:</label></p>
+                <p><label for="cQtd">Quantidade:</label></p>
+                    <p><label for="cTot">Preço Total: R$</label></p>
 </fieldset>
 
 [BOTÃO ENVIAR]
